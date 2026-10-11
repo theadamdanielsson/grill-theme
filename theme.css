@@ -105,20 +105,22 @@
 }
 
 /* ----------------------------------------------------------------- light */
-/* The same cabinet with the lights on: warm paper, ember ink. */
+/* The same cabinet with the lights on: plain paper and dark ink, with ember kept for
+   what is lit: headings, the frame, the buttons. An earlier, peachier paper under
+   maroon ink read as pastel. */
 .theme-light {
-  --color-base-00: #fbf3e4;
-  --color-base-05: #f7edda;
-  --color-base-10: #f3e7d0;
-  --color-base-20: #efe0c6;
-  --color-base-25: #e8d6b8;
-  --color-base-30: #dcc59f;
-  --color-base-35: #cfb489;
-  --color-base-40: #b89a6c;
-  --color-base-50: #94774d;
-  --color-base-60: #7a5f3a;
-  --color-base-70: #5c4426;
-  --color-base-100: #2a1a0e;
+  --color-base-00: #f5f1e8;
+  --color-base-05: #efeadf;
+  --color-base-10: #e9e3d6;
+  --color-base-20: #e2dbcc;
+  --color-base-25: #d8d0bf;
+  --color-base-30: #c9bfa9;
+  --color-base-35: #b9ae96;
+  --color-base-40: #a0957c;
+  --color-base-50: #7f745e;
+  --color-base-60: #665c49;
+  --color-base-70: #4b4335;
+  --color-base-100: #1e1a14;
 
   --accent-h: 22;
   --accent-s: 90%;
@@ -142,15 +144,15 @@
   --color-pink-rgb: 192, 69, 122;
   --color-pink: #c0457a;
 
-  --inline-title-color: #7a1200;
-  --h1-color: #7a1200;
-  --h2-color: #b91c00;
-  --h3-color: #c2410c;
-  --h4-color: #c9650a;
-  --h5-color: #7a5f3a;
-  --h6-color: #94774d;
+  --inline-title-color: #5c1400;
+  --h1-color: #5c1400;
+  --h2-color: #8a2a08;
+  --h3-color: #a8400c;
+  --h4-color: #b05a0a;
+  --h5-color: #665c49;
+  --h6-color: #7f745e;
 
-  --bold-color: #7a1200;
+  --bold-color: #5c1400;
   --text-highlight-bg: rgba(255, 210, 63, 0.5);
   --text-selection: rgba(255, 140, 43, 0.28);
   --caret-color: #b91c00;
@@ -162,24 +164,24 @@
 
   --code-normal: #7a3a06;
   --blockquote-border-color: #b91c00;
-  --hr-color: #dcc59f;
+  --hr-color: #c9bfa9;
 
-  --nav-item-color-active: #7a1200;
-  --nav-item-background-active: rgba(255, 140, 43, 0.2);
-  --tab-text-color-focused-active: #7a1200;
+  --nav-item-color-active: #5c1400;
+  --nav-item-background-active: rgba(120, 84, 36, 0.16);
+  --tab-text-color-focused-active: #5c1400;
 
-  --graph-line: #dcc59f;
-  --graph-node: #b89a6c;
-  --graph-node-unresolved: #dcc59f;
+  --graph-line: #c9bfa9;
+  --graph-node: #a0957c;
+  --graph-node-unresolved: #c9bfa9;
   --graph-node-focused: #b91c00;
   --graph-node-tag: #2f8f5b;
   --graph-node-attachment: #c9650a;
-  --graph-text: #5c4426;
+  --graph-text: #4b4335;
 
   --scrollbar-thumb-bg: rgba(92, 68, 38, 0.18);
   --scrollbar-active-thumb-bg: rgba(92, 68, 38, 0.35);
 
-  --grill-dots: rgba(122, 18, 0, 0.09);
+  --grill-dots: rgba(60, 44, 24, 0.1);
   --grill-title-glow: none;
 }
 
@@ -246,18 +248,18 @@ button.mod-cta:active {
    orange, flame) is left alone, so buttons, tiles and the map keep their colours. */
 .theme-light .grill-view,
 .theme-light .grill-arcade-screen {
-  --grill-screen: #fbf3e4;
-  --grill-screen-deep: #f3e7d0;
-  --grill-grid: #dcc59f;
-  --grill-panel: #fff9ec;
-  --grill-panel-deep: #f7edda;
-  --grill-map-shade: inset 0 0 0 1px #dcc59f;
-  --grill-ink: #7a1200;
-  --grill-ink-gold: #9a4a00;
-  --grill-ink-white: #7a1200;
-  --grill-ink-dim: #5c4426;
-  --grill-ink-accent: #c2410c;
-  --grill-ink-flame: #c2410c;
+  --grill-screen: #f5f1e8;
+  --grill-screen-deep: #e9e3d6;
+  --grill-grid: #c9bfa9;
+  --grill-panel: #fbf8f1;
+  --grill-panel-deep: #efeadf;
+  --grill-map-shade: inset 0 0 0 1px #c9bfa9;
+  --grill-ink: #2b1a10;
+  --grill-ink-gold: #8a4a00;
+  --grill-ink-white: #2b1a10;
+  --grill-ink-dim: #5a4a38;
+  --grill-ink-accent: #b03a0a;
+  --grill-ink-flame: #b03a0a;
   --grill-ink-hot: #c9301c;
 }
 /* Ink doesn't glow, and paper has no scanlines or dark corners. */
@@ -271,18 +273,25 @@ button.mod-cta:active {
 .theme-light .grill-arcade-screen.grill-arcade-screen::after {
   background: none;
 }
+/* Nor a flame under it: on a dark screen the glow at the foot is firelight, on paper
+   it is a pink wash. */
+.theme-light .grill-view .grill-arcade-screen::before,
+.theme-light .grill-arcade-screen.grill-arcade-screen::before {
+  background: none;
+  animation: none;
+}
 /* The corner rivets and the dot grid, in ink. */
 .theme-light .grill-view .grill-arcade-screen {
   background:
-    linear-gradient(#b91c00, #b91c00) top 5px left 5px / 8px 8px no-repeat,
-    linear-gradient(#b91c00, #b91c00) top 5px right 5px / 8px 8px no-repeat,
-    linear-gradient(#b91c00, #b91c00) bottom 5px left 5px / 8px 8px no-repeat,
-    linear-gradient(#b91c00, #b91c00) bottom 5px right 5px / 8px 8px no-repeat,
-    radial-gradient(circle, rgba(122, 18, 0, 0.1) 1px, transparent 1.4px) 0 0 / 15px 15px,
-    #fbf3e4;
+    linear-gradient(#7a1200, #7a1200) top 5px left 5px / 8px 8px no-repeat,
+    linear-gradient(#7a1200, #7a1200) top 5px right 5px / 8px 8px no-repeat,
+    linear-gradient(#7a1200, #7a1200) bottom 5px left 5px / 8px 8px no-repeat,
+    linear-gradient(#7a1200, #7a1200) bottom 5px right 5px / 8px 8px no-repeat,
+    radial-gradient(circle, rgba(60, 44, 24, 0.1) 1px, transparent 1.4px) 0 0 / 15px 15px,
+    #f5f1e8;
 }
 .theme-light .grill-view .grill-map-wrap {
-  background-image: radial-gradient(circle, rgba(122, 18, 0, 0.09) 1px, transparent 1.4px);
+  background-image: radial-gradient(circle, rgba(60, 44, 24, 0.1) 1px, transparent 1.4px);
 }
 /* First run's backdrop map is drawn faint for a dark ground. On paper it is darkened
    so it can still be seen. */

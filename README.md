@@ -10,7 +10,7 @@ I made it to complement the plugin. The note you study from and the pane that gr
 
 ![Dark mode: a note beside Grill's home screen](docs/dark-home.png)
 
-**Light** is the same cabinet with the lights on. Warm paper, ember ink.
+**Light** is the same cabinet with the lights on. Plain paper, dark ink, and ember where something is lit.
 
 ![Light mode: a note beside Grill's home screen](docs/light-home.png)
 
